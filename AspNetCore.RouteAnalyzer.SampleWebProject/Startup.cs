@@ -22,6 +22,7 @@ namespace AspNetCore.RouteAnalyzer.SampleWebProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddRouteAnalyzer();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +42,7 @@ namespace AspNetCore.RouteAnalyzer.SampleWebProject
 
             app.UseMvc(routes =>
             {
+                routes.MapRouteAnalyzer("/routes");
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
