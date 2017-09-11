@@ -58,6 +58,12 @@ namespace AspNetCore.RouteAnalyzer.Inner
                     info.Invocation = $"{e.ControllerName}Controller.{e.ActionName}";
                 }
 
+                // Special controller path
+                if (info.Path == "/RouteAnalyzer_Main/ShowAllRoutes")
+                {
+                    info.Path = RouteAnalyzerRouteBuilderExtensions.RouteAnalyzerUrlPath;
+                }
+
                 // Additional information of invocation
                 info.Invocation += $" ({_e.DisplayName})";
 

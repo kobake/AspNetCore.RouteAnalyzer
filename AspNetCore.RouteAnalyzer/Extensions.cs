@@ -15,8 +15,11 @@ namespace AspNetCore.RouteAnalyzer
 
     public static class RouteAnalyzerRouteBuilderExtensions
     {
+        public static string RouteAnalyzerUrlPath { get; private set; } = "";
+
         public static IRouteBuilder MapRouteAnalyzer(this IRouteBuilder routes, string routeAnalyzerUrlPath)
         {
+            RouteAnalyzerUrlPath = routeAnalyzerUrlPath;
             routes.Routes.Add(new Router(routes.DefaultHandler, routeAnalyzerUrlPath));
             return routes;
         }
