@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AspNetCore.RouteAnalyzer</id>
+    <title>AspNetCore.RouteAnalyzer</title>
+    <version>0.5.0</version>
+    <authors>kobake</authors>
+    <owners>kobake</owners>
+    <licenseUrl>https://github.com/kobake/AspNetCore.RouteAnalyzer/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/kobake/AspNetCore.RouteAnalyzer</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/kobake/AspNetCore.RouteAnalyzer/master/nuget_icon_300x300.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>View all route information for ASP.NET Core project.</description>
+    <summary>View all route information for ASP.NET Core project.</summary>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017 kobake</copyright>
+    <tags>aspnetcore,aspnetcoremvc</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNetCore" version="2.0.0" />
+      <dependency id="Microsoft.AspNetCore.Mvc" version="2.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="AspNetCore.RouteAnalyzer\bin\Release\netcoreapp2.0\AspNetCore.RouteAnalyzer.dll" target="lib\netcoreapp2.0\" />
+    <file src="AspNetCore.RouteAnalyzer\bin\Release\netcoreapp2.0\AspNetCore.RouteAnalyzer.pdb" target="lib\netcoreapp2.0\" />
+  </files>
+</package>
