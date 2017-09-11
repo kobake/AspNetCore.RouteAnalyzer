@@ -6,6 +6,8 @@ View all route information for ASP.NET Core project.
 
 ## Usage on your ASP.NET Core project
 ### Install NuGet package
+- [NuGet Gallery | AspNetCore.RouteAnalyzer](https://www.nuget.org/packages/AspNetCore.RouteAnalyzer)
+
 ```
 PM> Install-Package AspNetCore.RouteAnalyzer
 ```
