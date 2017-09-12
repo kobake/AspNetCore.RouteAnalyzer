@@ -13,9 +13,11 @@ PM> Install-Package AspNetCore.RouteAnalyzer
 ```
 
 ### Edit Startup.cs
-Insert code ```services.AddRouteAnalyzer();``` into Startup.cs as follows.
+Insert code ```services.AddRouteAnalyzer();``` and required ```using``` directive into Startup.cs as follows.
 
 ```cs
+using AspNetCore.RouteAnalyzer; // Add
+....
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc();
