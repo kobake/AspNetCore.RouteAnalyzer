@@ -57,6 +57,18 @@ namespace AspNetCore.RouteAnalyzer.Inner
                     }
                     info.Invocation = $"{e.ControllerName}Controller.{e.ActionName}";
                 }
+                
+                // Extract HTTP Verb
+                if (_e.ActionConstraints != null && _e.ActionConstraints.Select(t => t.GetType()).Contains(typeof(HttpMethodActionConstraint)))
+                {
+                    HttpMethodActionConstraint httpMethodAction = 
+                        _e.ActionConstraints.FirstOrDefault(a => a.GetType() == typeof(HttpMethodActionConstraint)) as HttpMethodActionConstraint;
+
+                    if(httpMethodAction != null)
+                    {
+                        info.HttpMethod = string.Join(",", httpMethodAction.HttpMethods);
+                    }
+                }
 
                 // Special controller path
                 if (info.Path == "/RouteAnalyzer_Main/ShowAllRoutes")
