@@ -9,7 +9,7 @@ namespace AspNetCore.RouteAnalyzer
 
         public override string ToString()
         {
-            return $"RouteInformation{{Area:\"{Area}\", HttpMethod: \"{HttpMethod}\" Path:\"{Path}\", Invocation:\"{Invocation}\"}}";
+            return $"RouteInformation{{Area:\"{Area}\", HttpMethod: \"{HttpMethod}\", Path:\"{Path}\", Invocation:\"{Invocation}\"}}";
         }
     }
 }
