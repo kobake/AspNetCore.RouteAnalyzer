@@ -3,7 +3,7 @@
   <metadata>
     <id>AspNetCore.RouteAnalyzer</id>
     <title>AspNetCore.RouteAnalyzer</title>
-    <version>0.5.2</version>
+    <version>0.5.3</version>
     <authors>kobake</authors>
     <owners>kobake</owners>
     <licenseUrl>https://github.com/kobake/AspNetCore.RouteAnalyzer/blob/master/LICENSE</licenseUrl>
