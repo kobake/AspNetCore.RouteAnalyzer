@@ -76,4 +76,3 @@ Then you can view all route informations on VS output panel.
 
 ![screenshot](https://raw.githubusercontent.com/kobake/AspNetCore.RouteAnalyzer/master/screenshots/debugprint.png)
 
- 
