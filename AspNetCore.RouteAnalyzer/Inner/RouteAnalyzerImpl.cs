@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Internal;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AspNetCore.RouteAnalyzer.Inner
 {
@@ -56,6 +57,18 @@ namespace AspNetCore.RouteAnalyzer.Inner
                         info.Path = $"/{e.ControllerName}/{e.ActionName}";
                     }
                     info.Invocation = $"{e.ControllerName}Controller.{e.ActionName}";
+                }
+                
+                // Extract HTTP Verb
+                if (_e.ActionConstraints != null && _e.ActionConstraints.Select(t => t.GetType()).Contains(typeof(HttpMethodActionConstraint)))
+                {
+                    HttpMethodActionConstraint httpMethodAction = 
+                        _e.ActionConstraints.FirstOrDefault(a => a.GetType() == typeof(HttpMethodActionConstraint)) as HttpMethodActionConstraint;
+
+                    if(httpMethodAction != null)
+                    {
+                        info.HttpMethod = string.Join(",", httpMethodAction.HttpMethods);
+                    }
                 }
 
                 // Special controller path
