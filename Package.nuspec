@@ -13,7 +13,7 @@
     <description>View all route information for ASP.NET Core project.</description>
     <summary>View all route information for ASP.NET Core project.</summary>
     <releaseNotes></releaseNotes>
-    <copyright>Copyright 2017 kobake</copyright>
+    <copyright>Copyright 2017-2018 kobake</copyright>
     <tags>aspnetcore,aspnetcoremvc</tags>
     <dependencies>
       <dependency id="Microsoft.AspNetCore" version="2.0.0" />
